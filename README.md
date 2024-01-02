@@ -1,19 +1,19 @@
 # Benvenuto nel corso React
 
-Come primo passo, crea una cartella nel tuo desktop.\
-Apri un terminale e recati in quella cartella. Una volta al suo interno digita il seguente comando per scaricare la repo:\
+Come primo passo, crea una cartella nel tuo desktop.
+Apri un terminale e recati in quella cartella. Una volta al suo interno digita il seguente comando per scaricare la repo:
 
 ```
 git clone https://github.com/gabrielecallegari/react-corso.git
 ```
 
-adesso recati all'interno della cartella\
+adesso recati all'interno della cartella
 
 ```
 cd react-corso
 ```
 
-Prima di tutto, scarica tutte le dependency col comando\
+Prima di tutto, scarica tutte le dependency col comando
 
 ```
 npm install
