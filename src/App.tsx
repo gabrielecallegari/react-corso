@@ -8,7 +8,7 @@ function App() {
       <img src={logo} className="App-logo" alt="logo" />
       <div className="text-center grid gap-6 justify-center " >
         <h1 className="text-4xl text-white">
-          Benvenuto nel corso React 101
+          Benvenuto nel corso React 101!
         </h1>
         <a className="text-blue-300 text-2xl border-b-2 border-blue-300 cursor-pointer w-fit" href="https://github.com/gabrielecallegari/react-corso">
           Link Repo GitHub
