@@ -22,7 +22,7 @@ npm install
 e poi digita 
 
 ```
-cd start
+npm start
 ```
 
 
