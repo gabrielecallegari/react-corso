@@ -30,3 +30,16 @@ npm start
 Presso il tuo [localhost alla porta 3000](http://localhost:3000/) dovresti vedere a schermo il simbolo di React.
 
 In questo progetto useremo [Tailwind](https://tailwindcss.com/docs/utility-first) per mettere lo stile ad ogni elemento. 
+
+Per creare il tuo branch (N.B: Potrebbe essere già stato creato, controlla in alto a sinistra nel dropdown dove c'è scritto Master. Se è già presente il tuo branch, salta questo passaggio), all'interno della directory react-corso, digita
+
+```
+git branch <nome-branch>
+```
+
+Non dimenticarti di fare un commit con il tuo nuovo branch
+
+Per utilizzare il tuo branch scrivi
+```
+git checkout <nome-branch>
+```
