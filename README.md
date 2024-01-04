@@ -51,3 +51,4 @@ git checkout <nome-branch>
 - La gestione degli stati attraverso [Redux](https://redux.js.org/introduction/getting-started)
 - La pubblicazione del proprio sito su [Netlify](https://www.netlify.com/)
 - La gestione delle informazioni provenienti dal [backend di Google Firebase](https://firebase.google.com/?gad_source=1&gclid=Cj0KCQiAy9msBhD0ARIsANbk0A-eIkXMcgRIkx4OtDusuWC2f062qgniNFWg9bDNzl-Eu-cwwNXDMuAaAjiOEALw_wcB&gclsrc=aw.ds)
+- L'uso di [TailwindCSS](https://tailwindcss.com/docs/installation)
