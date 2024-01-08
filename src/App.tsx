@@ -4,6 +4,12 @@ import "./App.css";
 function App() {
   console.log("ecco la mia variabile:")
   const variableName: number = 0
+
+  interface MyInterface {
+    number: number;
+    name: string;
+  }
+
   console.log(variableName)
   return (
     <div className="w-full bg-slate-700 h-screen justify-center items-center grid">
