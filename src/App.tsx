@@ -4,12 +4,18 @@ import "./App.css";
 function App() {
   console.log("ecco la mia variabile:")
   const variableName: number = 0
-
+  function test(age:number, name:string, gender?: string){
+    console.log(name);
+    console.log("Age: ", age);
+    console.log("Gender: ", gender);
+  }
   interface MyInterface {
     number: number;
     name: string;
   }
 
+  test(27, "lorenzo")
+  
   console.log(variableName)
   return (
     <div className="w-full bg-slate-700 h-screen justify-center items-center grid">
