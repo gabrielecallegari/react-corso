@@ -4,13 +4,14 @@ import "./App.css";
 function App() {
 
   function compito(x: number, y: number, stringa: string, boo: boolean, z?:number){
-
-      if (z === undefined){
-        console.log("z si identifica come un", z);
-      }
-
-      if (boo ===true){
+      if (boo ===true ){
         console.log("buona sera", stringa)
+      }else{
+        if (z === undefined){
+          console.log(x*y);
+        }else{
+          console.log(x*y*z)
+        }
       }
   }
 
