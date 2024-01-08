@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+
   return (
     <div className="w-full bg-slate-700 h-screen justify-center items-center grid">
       <img src={logo} className="App-logo" alt="logo" />
