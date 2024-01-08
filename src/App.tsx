@@ -2,9 +2,23 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+
+  function compito(x: number, y: number, stringa: string, boo: boolean, z?:number){
+
+      if (z === undefined){
+        console.log("z si identifica come un", z);
+      }
+
+      if (boo ===true){
+        console.log("buona sera", stringa)
+      }
+  }
+
+  compito(1,2,"maestro",true)
+
   return (
     <div className="w-full bg-slate-700 h-screen justify-center items-center grid">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={'https://th.bing.com/th/id/R.e06ffb10941e302bbb71b24ba44b8082?rik=QC0e4J0oEMWJRg&pid=ImgRaw&r=0'} className="App-logo" alt="logo" />
       <div className="text-center grid gap-6 justify-center " >
         <h1 className="text-4xl text-white">
           Benvenuto nel corso React 101!
