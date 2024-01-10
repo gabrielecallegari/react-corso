@@ -9,13 +9,26 @@ function App() {
     console.log("Age: ", age);
     console.log("Gender: ", gender);
   }
+
+  function moltiplyIfTrue(boo:Boolean,n1:number,n2:number, str:string,n3?: number ){
+    if(boo){
+      return str+" buona sera";
+    }else{
+      if(n3!=null){
+        return n1*n2*n3;
+      }else{
+        return n1*n2;
+      } 
+    }
+  }
   interface MyInterface {
     number: number;
     name: string;
   }
 
   test(27, "lorenzo")
-  
+  console.log(moltiplyIfTrue(true, 3,2,"ciao",5))
+
   console.log(variableName)
   return (
     <div className="w-full bg-slate-700 h-screen justify-center items-center grid">
