@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="">
       <p>father component</p>
-    <FirstComponent/>
+    <FirstComponent name={"lorenzo"} age={65}/>
     </div>
   );
 }
