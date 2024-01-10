@@ -2,16 +2,18 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  function prova(variabile: boolean) {
-    if (variabile === true) {
-      console.log(true);
-    } else {
-      console.log(false);
+  function moltiplyIfTrue(boo:boolean,n1:number,n2:number, str:string, n3?: number ){
+    if(boo){
+      return str+" buona sera";
+    }else{
+      if(n3!=null){
+        return n1*n2*n3;
+      }else{
+        return n1*n2;
+      } 
     }
   }
-
-  prova(true);
-
+  console.log(moltiplyIfTrue(true, 3,2,"ciao",5))
   return (
     <div className="w-full bg-slate-700 h-screen justify-center items-center grid">
       <img src={logo} className="App-logo" alt="logo" />
