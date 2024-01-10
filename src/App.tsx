@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import PrimoComponente from "./Components/PrimoComponente/PrimoComponente";
+import CartaIdentita from "./Components/CartaIdentita/CartaIdentita";
 
 function App() {
 
@@ -22,12 +23,14 @@ function App() {
     <div className="">
       <center>
       <img src={'https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif'} className="App-logo" alt="logo" />
-      <div className="text-center grid gap-6 justify-center " >
         <p>
           chipi chipi chapa chapa dubi dubi daba daba
         </p>
         <PrimoComponente x={"Vincenzo"} y={"Grasso"} z={21}/>
-      </div>
+        <br></br>
+        <CartaIdentita/>
+        <br></br>
+        <CartaIdentita/>
       </center>
     </div>
   );

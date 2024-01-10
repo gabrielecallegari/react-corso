@@ -2,7 +2,6 @@ interface ProvaInterfaccia {
     x: string,
     y: string,
     z: number
-
 }
 
 export default function PrimoComponente({
