@@ -1,17 +1,38 @@
 import logo from "./logo.svg";
 import "./App.css";
-import CartaIdentita from "./Components/CartaIdentita";
-import NameAge from "./Components/NameYear";
+import CartaIdentita, { CartaidentitaProps } from "./Components/CartaIdentita";
 
 function App() {
-  return (
-    <div className="">
-      <p>Name, surname, year, CF, gender</p>
-    <CartaIdentita name={"lorenzo"} surname={"cairo"} year={1997}/>
-    <p>Name, surname, year, CF, gender</p>
-    <CartaIdentita name={"lorenzo"} surname={"bairo"} year={1998}/>
-    </div>
-  );
+  const arrayPeople : CartaidentitaProps[]=[
+{
+name:"Lorenzo",
+surname:"Cairo",
+year: 1997,
+CF:"ABABABA",
+gender:"male"
+},{
+  name:"Loredana",
+surname:"Bairo",
+year: 1998,
+CF:"ABABABA",
+gender:"female"
 }
-
+]
+return (
+  <div>
+    {
+      arrayPeople.map((el:CartaidentitaProps)=>{
+        return (
+          <CartaIdentita 
+          name={el.name}
+          surname={el.surname}
+          year={el.year}
+          CF={el.CF}
+          gender={el.gender}/>
+        )
+      })}
+  </div>
+    )
+}
+  
 export default App;

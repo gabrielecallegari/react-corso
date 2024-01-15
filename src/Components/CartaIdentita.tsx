@@ -1,20 +1,36 @@
 import CFGender from "./CFGender";
+import NameYear from "./NameYear";
 import NameAge from "./NameYear";
 
-interface ComponentProps {
+export interface CartaidentitaProps {
     name:string,
     surname:string,
-    year:number
+    year:number,
+    CF:string,
+    gender:string
 }
 
 const CartaIdentita =({
-
-}:ComponentProps
+name,
+surname,
+year,
+CF,
+gender
+}:CartaidentitaProps
 ) => { 
     
     return (
-        <><NameAge></NameAge>
-        <CFGender></CFGender></>
+       <div>
+        <NameYear
+            name={name}
+            surname={surname}
+            year={year}
+        />
+        <CFGender
+            CF={CF}
+            gender={gender}
+        />
+       </div>
     )
 }
     export default  CartaIdentita;

@@ -1,14 +1,14 @@
-interface ComponentProps {
-    name?:string,
-    surname?:string,
-    year?:number
+interface CartaidentitaProps {
+    name:string,
+    surname:string,
+    year:number
 }
 
-const NameAge =({
+const NameYear =({
     name,
     surname,
     year
-}:ComponentProps
+}:CartaidentitaProps
 ) => { 
     return (
         <div>
@@ -18,4 +18,4 @@ const NameAge =({
         </div>
     )
 };
-    export default NameAge;
+    export default NameYear;

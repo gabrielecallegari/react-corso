@@ -1,12 +1,12 @@
-interface ComponentProps {
-    CF?:string,
-    gender?:string
+interface CartaidentitaProps {
+    CF:string,
+    gender:string
 }
 
 const CFGender =({
     CF,
     gender
-}:ComponentProps
+}:CartaidentitaProps
 ) => { 
     return (
         <div>
