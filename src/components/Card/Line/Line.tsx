@@ -1,4 +1,6 @@
 const Line = ({ oggetto }: { oggetto: string }) => {
+  //l'htmlFor che vedete nella label serve per selezionare la checkbox quando l'utente clicca
+  //sulla scritta
   return (
     <div className="w-full">
       <input type="checkbox" id={oggetto} />
