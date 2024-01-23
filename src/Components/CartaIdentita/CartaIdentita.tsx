@@ -1,11 +1,25 @@
 import Dati1 from "../DatiCarta/Dati1";
 import Dati2 from "../DatiCarta/Dati2";
 
-export default function CartaIdentita(){
+export interface CartaIdentitaProps {
+    nome: string,
+    cognome: string,
+    anno: number,
+    cf: string,
+    sesso: string
+}
+
+export default function CartaIdentita({
+    nome,
+    cognome,
+    anno,
+    cf,
+    sesso
+}: CartaIdentitaProps){
     return(
         <div>
-            <Dati1 nome={"Vincenzo"} cognome={"Grasso"} datadinascita={"27/11/2002"}/>
-            <Dati2 cf={"1234567890123456"} sesso={"Poco purtroppo"}/>
+            <Dati1 nome={nome} cognome={cognome} datadinascita={anno}/>
+            <Dati2 cf={cf} sesso={sesso}/>
         </div>
     );
 }

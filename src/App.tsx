@@ -1,7 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
 import PrimoComponente from "./Components/PrimoComponente/PrimoComponente";
-import CartaIdentita from "./Components/CartaIdentita/CartaIdentita";
+import CartaIdentita, { CartaIdentitaProps } from "./Components/CartaIdentita/CartaIdentita";
+import Riga from "./Components/Riga/Riga";
+import { useState } from "react";
+import Bottoni from "./Components/Bottoni/Bottoni";
 
 function App() {
 
@@ -19,19 +22,37 @@ function App() {
 
   compito(1,2,"maestro",true)
 
+  const arrNum : number[] = [0,1,2,3,4,5,6,7,8,9]
+
+  arrNum.map((elemento: number)=> 
+  console.log(elemento)
+  )
+
+  const arrArticle : string [] = ["Latte", "Uova","Formaggio","Prosciutto","Latte","Latte","Latte","Latte","Latte","Latte","Latte"]
+
+  const [count, setCount] = useState<number>(0)
+  
+  function clicked(){
+    setCount(count+1)
+  }
+
   return (
     <div className="">
       <center>
       <img src={'https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif'} className="App-logo" alt="logo" />
-        <p>
-          chipi chipi chapa chapa dubi dubi daba daba
-        </p>
-        <PrimoComponente x={"Vincenzo"} y={"Grasso"} z={21}/>
-        <br></br>
-        <CartaIdentita/>
-        <br></br>
-        <CartaIdentita/>
-      </center>
+
+        {arrArticle.map((articolo: string, i: number) =>{
+          return <Riga articolo={articolo} key={i} identificativo={i}/>
+        })}
+
+        <button onClick={()=>{
+          clicked()
+          console.log("Non sei brutto")
+        }}>mi hai toccato: {count}</button>
+
+        <Bottoni/>
+    
+      </center> 
     </div>
   );
 }

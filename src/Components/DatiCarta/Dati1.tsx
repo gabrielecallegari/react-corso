@@ -1,7 +1,7 @@
 interface NomeCognomeData {
     nome: string,
     cognome: string
-    datadinascita: string
+    datadinascita: number
 }
 
 export default function Dati1({
