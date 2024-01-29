@@ -16,6 +16,7 @@ function App() {
     <div className="p-5  w-full" >
       <p>Valore variabile: {incremento} </p>
       <button onClick={clicked} >Cliccami</button>
+      <img src="/img/charmender.png" />
     </div>
   );
 }
