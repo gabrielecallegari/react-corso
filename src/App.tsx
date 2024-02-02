@@ -65,6 +65,36 @@ function App() {
         })
     }
 
+    interface InterfacciaCompito {
+        portata: "Primo" | "Secondo" | "Contorno" | "Dolce"
+        nome: string
+        prezzo: number
+        chef?: string
+    }
+
+    function funzioneCompito(oggetto: InterfacciaCompito): void {
+        console.log("Nome Piatto: " + oggetto.nome)
+        console.log("Tipo Piatto: " + oggetto.portata)
+        console.log("Prezzo: " + oggetto.prezzo)
+        if(oggetto.chef != undefined)
+            console.log("Nome Chef: " + oggetto.chef)
+    }
+
+    const ogg1: InterfacciaCompito = {
+        portata: "Secondo",
+        nome: "Arrosto all'arancia",
+        prezzo: 45.65,
+        chef: "Auguste Gusteau"
+    }
+    const ogg2: InterfacciaCompito = {
+        portata: "Primo",
+        nome: "Spaghetti allo scoglio",
+        prezzo: 25.00
+    }
+
+    funzioneCompito(ogg1)
+    funzioneCompito(ogg2)
+
   return (
     <div className="p-5  w-full" >
         <Title />
