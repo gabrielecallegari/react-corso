@@ -1,22 +1,10 @@
-import { useState } from "react";
 import "./App.css";
+import Prezzo from "./components/Prezzo/Prezzo";
 
 function App() {
-  
-  const [incremento, setIncremento] = useState<number>(0)
-  
-
-  function clicked(){
-    console.log("Click");
-    setIncremento(incremento +1)
-    
-  }
-
   return (
-    <div className="p-5  w-full" >
-      <p>Valore variabile: {incremento} </p>
-      <button onClick={clicked} >Cliccami</button>
-      <img src="/img/charmender.png" />
+    <div className="p-5  w-full">
+      <Prezzo price={32} valuta={"€"} />
     </div>
   );
 }
