@@ -103,7 +103,7 @@ function App() {
 
   return (
     <div className="p-5  w-full" >
-        <Title />
+        <Title prezzo={32} valuta={"€"} />
 
     </div>
   );
