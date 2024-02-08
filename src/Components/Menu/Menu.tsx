@@ -12,7 +12,7 @@ const Menu = () => {
                 <div className={"font-bold text-2xl grow text-center"}>
                     Prezzo: {prezzo} €
                 </div>
-                <img src={"https://cdn-icons-png.flaticon.com/512/107/107799.png"} className={"h-8 w-8"} />
+                <img src={"https://cdn-icons-png.flaticon.com/512/107/107799.png"} className={"h-12 w-12"} />
             </div>
             <div className={"bg-gray-100 p-5 w-full"}>
                 <div className={"flex"}>
