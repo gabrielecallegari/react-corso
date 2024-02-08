@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Title from "./Components/Title/Title";
+import Menu from "./Components/Menu/Menu";
 
 export interface ProvaInterfaccia {
     nome :string
@@ -103,8 +104,7 @@ function App() {
 
   return (
     <div className="p-5  w-full" >
-        <Title prezzo={32} valuta={"€"} />
-
+        <Menu />
     </div>
   );
 }
