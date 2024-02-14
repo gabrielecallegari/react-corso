@@ -1,50 +1,62 @@
 import {useState} from "react";
+import FigliouseEffect from "../FigliouseEffect/FigliouseEffect";
+import Carta from "../Carta/Carta";
+
+export interface card {
+    nome: string
+    desc: string
+    prezzo: number
+    azione: any
+}
+
 
 const Menu = () => {
-
-    interface card {
-        nome: string
-        desc: string
-        prezzo: number
-    }
-
-    const cards: card[] = [
-        {
-            nome: "Crunchy Butterscotch",
-            desc: "Butterscotch & Cashews",
-            prezzo: 18
-        },
-        {
-            nome: "Supermans Secret",
-            desc: "Peanut Butter, Dry Fruit, with Vanilla Ice Cream",
-            prezzo: 21
-        },
-        {
-            nome: "Wonder Woman Shake",
-            desc: "Saffron, with Vanilla Ice Cream ",
-            prezzo: 19
-        },
-        {
-            nome: "Almond Joy",
-            desc: "American Nut, Badam Shake, Hazelnut Marimbula",
-            prezzo: 19
-        },
-        {
-            nome: "Vins 'n' Tasty",
-            desc: "Frusta Margherita, 33cl Fanta",
-            prezzo: 27
-        },
-        {
-            nome: "Spider-Man Flavour",
-            desc: "Webs, Spiders, Pain",
-            prezzo: 31
-        },
-    ]
 
     const [currProd, setCurrProd] = useState({
         nome: "non selezionato",
         prezzo: 0
     })
+
+    const cards: card[] = [
+        {
+            nome: "Crunchy Butterscotch",
+            desc: "Butterscotch & Cashews",
+            prezzo: 18,
+            azione: setCurrProd //la funzione set può essere usata come attributo! utile per spezzettare codice
+        },
+        {
+            nome: "Supermans Secret",
+            desc: "Peanut Butter, Dry Fruit, with Vanilla Ice Cream",
+            prezzo: 21,
+            azione: setCurrProd
+        },
+        {
+            nome: "Wonder Woman Shake",
+            desc: "Saffron, with Vanilla Ice Cream ",
+            prezzo: 19,
+            azione: setCurrProd
+        },
+        {
+            nome: "Almond Joy",
+            desc: "American Nut, Badam Shake, Hazelnut Marimbula",
+            prezzo: 19,
+            azione: setCurrProd
+        },
+        {
+            nome: "Vins 'n' Tasty",
+            desc: "Frusta Margherita, 33cl Fanta",
+            prezzo: 27,
+            azione: setCurrProd
+        },
+        {
+            nome: "Spider-Man Flavour",
+            desc: "Webs, Spiders, Pain",
+            prezzo: 31,
+            azione: setCurrProd
+        },
+    ]
+
+
 
     return (
         <div className={"w-full"}>
@@ -64,19 +76,12 @@ const Menu = () => {
                 </div>
                 {cards.map((p) => {
                     return (
-                        <div className={"bg-white p-2 mb-5"}>
-                            <p className={"font-bold"}> {p.nome} </p>
-                            <p className={"text-xs text-gray-600 pb-3"}> {p.desc} </p>
-                            <div className={"flex"}>
-                                <p className={"grow text-left font-extrabold"}> {p.prezzo} € </p>
-                                <button onClick={() => setCurrProd( {nome: p.nome, prezzo: p.prezzo} )}
-                                        className={"bg-red-600 py-2 px-5 text-white rounded"}> Add </button>
-                            </div>
-                        </div>
+                        <FigliouseEffect title={"ho wrappato ogni carta"}>
+                            <Carta p={p} />
+                        </FigliouseEffect>
                     )
                 })}
             </div>
-
         </div>
     );
 };
