@@ -1,4 +1,3 @@
-import {useState} from "react";
 import {card} from "../Menu/Menu";
 
 const Carta = ({p}:{p:card}) => {
