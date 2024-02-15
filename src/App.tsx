@@ -5,6 +5,7 @@ import Menu from "./Components/Menu/Menu";
 import Figlio from "./Components/Figlio/Figlio";
 import UseEffect from "./Components/UseEffect/UseEffect";
 import FigliouseEffect from "./Components/FigliouseEffect/FigliouseEffect";
+import Tabella from "./Components/Tabella/Tabella";
 
 export interface ProvaInterfaccia {
     nome :string
@@ -104,10 +105,9 @@ function App() {
 
 
 
-// per passare qualcosa al Figlio, apro e chiudo il tag e dentro gli metto il componente da passare come figlio
   return (
     <div className="p-5 w-full" >
-        <Menu />
+        <Tabella />
     </div>
   );
 }

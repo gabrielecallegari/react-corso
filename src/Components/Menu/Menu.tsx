@@ -58,7 +58,7 @@ const Menu = () => {
     ]
 
 
-
+// per passare qualcosa al Figlio, apro e chiudo il tag e dentro gli metto il componente da passare come figlio
     return (
         <MenuWrapper prodCurr={currProd}>
             {cards.map((p) => {
