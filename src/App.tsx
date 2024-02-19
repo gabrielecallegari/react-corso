@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Card from "./components/Card/Card";
 import { Cards } from "./interface/interface";
-import Figlio from "./components/Figlio/Figlio";
 
 function App() {
   const [item, setItem] = useState<string>("Non Selezionato");
@@ -59,9 +57,7 @@ function App() {
       <p className="text-3xl font-semibold">Prodotto selezionato: {item}</p>
       {arrayProdotti.map((el: Cards, i: number) => {
         return (
-          <Figlio title={el.title} key={i} >
-            <Card onClick={el.onClick} title={el.title} />
-          </Figlio>
+          <p>a</p>
         );
       })}
     </div>
