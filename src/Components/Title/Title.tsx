@@ -1,4 +1,3 @@
-import {ProvaInterfaccia} from "../../App";
 import {useState} from "react";
 
 export interface tipoTitolo {

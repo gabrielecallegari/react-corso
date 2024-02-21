@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Gold Phone",
+      "price": 319.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://m.media-amazon.com/images/I/61BxdDma4dL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Smartphone Black",
+      "price": 129.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://m.media-amazon.com/images/I/716OmvUFy1L._AC_SL1500_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "DreamBook PC",
+      "price": 739.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://img.gkbcdn.com/p/2019-12-16/VORKE-Notebook-15-PRO-Laptop-16GB-512GB-Windows-10-0-Gray-893388-._w500_p1_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Smartwatcher",
+      "price": 326.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://m.media-amazon.com/images/I/6157MUT2HKL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Stamprinter",
+      "price": 119.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "https://m.media-amazon.com/images/I/51F1GTaUG+L.jpg"
+    }
+  ]
+}
