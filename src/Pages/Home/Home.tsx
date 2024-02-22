@@ -1,6 +1,11 @@
 import Header from "./Header";
 import ProductCard from "./ProductCard";
-import data from "./prodotti.json"
+import datas from "../prodotti.json"
+import useOperations from "./hooks/useOperations";
+import {useProducts} from "./hooks/useProducts";
+import {useGetAllProducts} from "./hooks/GET/useGetAllProducts";
+import {useEffect, useState} from "react";
+import Prodotto from "../Prodotto/Prodotto";
 
 export interface tipoProd {
     id: number
@@ -12,10 +17,20 @@ export interface tipoProd {
 
 const Home = () => {
 
+    // per richiamare l'hooks custom creato, si fa così:
+    // crei una struttura che accolga gli elementi ritornati,
+    // li devi scrivere tutti e con il nome usato nell'hooks
+    const {prods, chiamataHooks} = useProducts()
+
+    const {somma, differenza, prodotto, quoziente} = useOperations(10, 5)
+
+    const [prodotti, setProdotti] = useState()
+    const {data} = useGetAllProducts(setProdotti)
+
     return (
         <Header>
             <div className={"p-10 flex gap-5"}>
-                {data.products.map((p:tipoProd) => {
+                {datas.products.map((p:tipoProd) => {
                     return(
                         <ProductCard prod={p} />
                     )

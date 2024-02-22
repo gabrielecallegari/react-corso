@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import Header from "../Home/Header";
 import {Link} from "react-router-dom";
-import data from "../Home/prodotti.json"
+import data from "../prodotti.json"
 
 const Prodotto = (props: any) => {
     // devo chiamare questo id esattamente come l'id specificato nel path del router

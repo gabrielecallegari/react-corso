@@ -6,7 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import Home from "./Pages/Home/Home";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Prodotto from "./Pages/Prodotto/Prodotto";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
+const queryClient = new QueryClient()
 
 //questa funzione ti definisce quali componenti troverai a un certo path del server
 // prende un array di oggetti, ognuno di questi oggetti contiene il path di riferimento
@@ -29,7 +31,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router} />
+      </QueryClientProvider>
   </React.StrictMode>
 );
 
