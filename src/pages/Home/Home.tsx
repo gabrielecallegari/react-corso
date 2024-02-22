@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { useProducts } from "./hooks/useProducts";
+import { useGetAllProducts } from "./hooks/GET/useGetAllProducts";
 
 const Home = () => {
-  const { products, chiamataHooks } = useProducts();
+  const { data } = useGetAllProducts()
   return (
     <div>
       <p>Sei nella home</p>
-      <button onClick={()=>chiamataHooks()} >Pemimmio</button>
       <Link to={"/prodotto/1"}>Vai al prodotto 1</Link>
     </div>
   );
