@@ -26,15 +26,18 @@ const Home = () => {
 
     const [prodotti, setProdotti] = useState()
     const {data} = useGetAllProducts(setProdotti)
+    console.log(prodotti)
 
     return (
         <Header>
-            <div className={"p-10 flex gap-5"}>
-                {datas.products.map((p:tipoProd) => {
-                    return(
-                        <ProductCard prod={p} />
-                    )
-                })}
+            <div className={"p-14"}>
+                <div className={"m-auto flex gap-5 flex-wrap"}>
+                    {datas.products.map((p:tipoProd) => {
+                        return(
+                            <ProductCard prod={p} />
+                        )
+                    })}
+                </div>
             </div>
         </Header>
     )
