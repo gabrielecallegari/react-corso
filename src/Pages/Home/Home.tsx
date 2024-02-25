@@ -9,10 +9,16 @@ import Prodotto from "../Prodotto/Prodotto";
 
 export interface tipoProd {
     id: number
-    name: string
-    price: number
+    title: string
     description: string
-    image: string
+    price: number
+    discountPercentage: number
+    rating: number
+    stock:number
+    brand: string
+    category: string
+    thumbnail: string
+    images: string[]
 }
 
 const Home = () => {
@@ -24,15 +30,31 @@ const Home = () => {
 
     const {somma, differenza, prodotto, quoziente} = useOperations(10, 5)
 
-    const [prodotti, setProdotti] = useState()
-    const {data} = useGetAllProducts(setProdotti)
-    console.log(prodotti)
+    const {data, isLoading, isError} = useGetAllProducts()
+
+    if(isLoading)
+        return(
+            <Header>
+                <div className={"p-14"}>
+                    Loading...
+                </div>
+            </Header>
+        )
+
+    if(isError)
+        return(
+            <Header>
+                <div className={"p-14"}>
+                    Errore nella query
+                </div>
+            </Header>
+        )
 
     return (
         <Header>
             <div className={"p-14"}>
                 <div className={"m-auto flex gap-5 flex-wrap"}>
-                    {datas.products.map((p:tipoProd) => {
+                    {data.products.map((p:tipoProd) => {
                         return(
                             <ProductCard prod={p} />
                         )

@@ -1,7 +1,8 @@
 import {useQuery} from "@tanstack/react-query";
 import {useEffect} from "react";
 
-export const useGetAllProducts = (setProdotti:any) => {
+export const useGetAllProducts = () => {
+
     const getProducts = async () => {
         const response = await fetch('https://dummyjson.com/products')
         return response.json()
@@ -12,10 +13,13 @@ export const useGetAllProducts = (setProdotti:any) => {
     })
 
     useEffect(() => {
+        if(query.isLoading) {
+            console.log("Loading...")
+        }
         // se la query va a buon fine stampi i dati
         if(query.isSuccess) {
             console.log(query.data)
-            setProdotti(query.data.products)
+            return query.data.products
         }
         // se la query fallisce fallo sapere all'utente
         else if(query.isError) {
@@ -28,5 +32,4 @@ export const useGetAllProducts = (setProdotti:any) => {
     // quando si riempie richiami lo useEffect
 
     return query
-
 }
