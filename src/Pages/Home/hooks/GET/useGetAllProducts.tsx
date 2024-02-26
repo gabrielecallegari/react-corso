@@ -14,7 +14,7 @@ export const useGetAllProducts = () => {
 
     useEffect(() => {
         if(query.isLoading) {
-            console.log("Loading...")
+            console.log("Loading..")
         }
         // se la query va a buon fine stampi i dati
         if(query.isSuccess) {
