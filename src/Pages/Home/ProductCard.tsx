@@ -1,6 +1,6 @@
 import {tipoProd} from "./Home";
 import React from "react";
-import {Link, redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const ProductCard = ({prod} : {prod:tipoProd}) => {
     return (

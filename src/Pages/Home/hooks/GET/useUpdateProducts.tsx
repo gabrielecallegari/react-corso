@@ -1,19 +1,19 @@
-import {useQuery} from "@tanstack/react-query";
+import {useMutation} from "@tanstack/react-query";
 import {useEffect} from "react";
 
-export const useGetAllProducts = () => {
+export const useUpdateProducts = () => {
 
     const getProducts = async () => {
         const response = await fetch('https://dummyjson.com/products')
         return response.json()
     }
 
-    const query = useQuery({
-        queryKey: ["getAllProducts"], queryFn: () => getProducts()
+    const query = useMutation({
+        mutationKey: ["updateProducts"], mutationFn: () => getProducts()
     })
 
     useEffect(() => {
-        if(query.isLoading) {
+        if(query.isPending) {
             console.log("Loading...")
         }
         // se la query va a buon fine stampi i dati

@@ -1,12 +1,9 @@
 import Header from "./Header";
 import ProductCard from "./ProductCard";
-import datas from "../prodotti.json"
 import useOperations from "./hooks/useOperations";
 import {useProducts} from "./hooks/useProducts";
 import {useGetAllProducts} from "./hooks/GET/useGetAllProducts";
-import {useEffect, useState} from "react";
-import Prodotto from "../Prodotto/Prodotto";
-
+import {useUpdateProducts} from "./hooks/GET/useUpdateProducts";
 export interface tipoProd {
     id: number
     title: string
@@ -30,9 +27,10 @@ const Home = () => {
 
     const {somma, differenza, prodotto, quoziente} = useOperations(10, 5)
 
-    const {data, isLoading, isError} = useGetAllProducts()
+    const query = useGetAllProducts()
+    const mutation = useUpdateProducts()
 
-    if(isLoading)
+    if(query.isLoading)
         return(
             <Header>
                 <div className={"p-14"}>
@@ -41,7 +39,7 @@ const Home = () => {
             </Header>
         )
 
-    if(isError)
+    if(query.isError)
         return(
             <Header>
                 <div className={"p-14"}>
@@ -54,7 +52,7 @@ const Home = () => {
         <Header>
             <div className={"p-14"}>
                 <div className={"m-auto flex gap-5 flex-wrap"}>
-                    {data.products.map((p:tipoProd) => {
+                    {query.data.products.map((p:tipoProd) => {
                         return(
                             <ProductCard prod={p} />
                         )

@@ -1,15 +1,15 @@
 import {useQuery} from "@tanstack/react-query";
 import {useEffect} from "react";
 
-export const useGetAllProducts = () => {
+export const useGetProduct = (id: string) => {
 
-    const getProducts = async () => {
-        const response = await fetch('https://dummyjson.com/products')
+    const getProduct = async () => {
+        const response = await fetch(`https://dummyjson.com/products/${id}`)
         return response.json()
     }
 
     const query = useQuery({
-        queryKey: ["getAllProducts"], queryFn: () => getProducts()
+        queryKey: ["getProduct"], queryFn: () => getProduct()
     })
 
     useEffect(() => {
