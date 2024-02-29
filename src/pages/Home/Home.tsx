@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { useGetAllProducts } from "./hooks/GET/useGetAllProducts";
+import { useState } from "react";
 
 const Home = () => {
-  const { data } = useGetAllProducts()
+  const [prodotti, setProdotti] = useState()
+  const { data } = useGetAllProducts(setProdotti)
+  console.log("PRODOTTI:",prodotti);
+  
+  
   return (
     <div>
       <p>Sei nella home</p>
