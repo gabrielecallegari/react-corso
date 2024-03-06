@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {Link, useAsyncValue} from "react-router-dom";
+import {Link} from "react-router-dom";
 import useCarrello from "./hooks/useCarrello";
 
 const Header = ({children}: {children:ReactNode}) => {
