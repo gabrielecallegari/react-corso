@@ -4,6 +4,7 @@ import useOperations from "./hooks/useOperations";
 import {useProducts} from "./hooks/useProducts";
 import {useGetAllProducts} from "./hooks/GET/useGetAllProducts";
 import {useUpdateProducts} from "./hooks/GET/useUpdateProducts";
+import useCarrello from "./hooks/useCarrello";
 export interface tipoProd {
     id: number
     title: string

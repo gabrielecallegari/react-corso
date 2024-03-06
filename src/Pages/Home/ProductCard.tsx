@@ -13,7 +13,7 @@ const ProductCard = ({prod} : {prod:tipoProd}) => {
                 <div className={"flex mt-4"}>
                     <p className={"text-red-700 m-auto ml-2 font-bold"}> {prod.price} €</p>
                     <Link to={"/prodotto/"+prod.id} className={"mr-2 m-auto mb-5 py-2 px-5 bg-teal-500 rounded " +
-                        "text-white font-bold hover:bg-black"}> Vedi </Link>
+                        "text-white font-bold hover:bg-black"}> Vedi ➜</Link>
                 </div>
             </div>
 

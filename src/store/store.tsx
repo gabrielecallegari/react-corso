@@ -2,10 +2,12 @@
 
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import prodottiReducer from "../reducers/prodottiReducer";
+import carrelloReducer from "../reducers/carrelloReducer";
 
 // reducer: file dove metti i settaggi dello stato
 const rootReducers = combineReducers({
-    prodottiReducer: prodottiReducer
+    prodottiReducer: prodottiReducer,
+    carrelloReducer: carrelloReducer
 })
 
 // creo un tipo che si chiama ReducerType e lo riempio con il tipo ritornato

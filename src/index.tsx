@@ -9,6 +9,7 @@ import Prodotto from "./Pages/Prodotto/Prodotto";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {Provider} from "react-redux";
 import {store} from "./store/store";
+import Carrello from "./Pages/Carrello/Carrello";
 
 
 const queryClient = new QueryClient()
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         // es: non puoi fare localhost/prodotto, devi fare localhost/prodotto/numeroProdotto
         path: "/prodotto/:prodottoId",
         element: <Prodotto />
+    },
+    {
+        path: "/carrello",
+        element: <Carrello />
     }
 ])
 
