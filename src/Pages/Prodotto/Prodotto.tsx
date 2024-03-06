@@ -6,7 +6,7 @@ import useCarrello from "../Home/hooks/useCarrello";
 
 const Prodotto = (props: any) => {
 
-    const {cart, addCart} = useCarrello()
+    const {addCart} = useCarrello()
 
     // devo chiamare questo id esattamente come l'id specificato nel path del router
     const {prodottoId} = useParams()

@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {clearCarrello, addCarrello} from "../../../reducers/carrelloReducer";
+import {clearCarrello, addCarrello, removeOggetto} from "../../../reducers/carrelloReducer";
 import {ReducerType} from "../../../store/store";
 
 const useCarrello = () => {
@@ -10,10 +10,13 @@ const useCarrello = () => {
     const addCart = (data:any) => {
         dispatch(addCarrello(data))
     }
-    const clearCart = (data:any) => {
-        dispatch(clearCarrello(data))
+    const clearCart = () => {
+        dispatch(clearCarrello())
     }
-    return {cart, addCart, clearCart}
+    const removeItem = (data:any) => {
+        dispatch(removeOggetto(data))
+    }
+    return {cart, addCart, clearCart, removeItem}
 }
 
 export default useCarrello

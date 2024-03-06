@@ -6,7 +6,7 @@ const ProductCard = ({prod} : {prod:tipoProd}) => {
     return (
         <div className={"w-64 border-2 border-gray-200 p-0.5 rounded flex flex-col justify-between"}>
             <div>
-                <a href={"/prodotto/"+prod.id}><img className={"w-56 h-56 m-auto my-5 object-cover"} src={prod.thumbnail} /></a>
+                <Link to={"/prodotto/"+prod.id}><img className={"w-56 h-56 m-auto my-5 object-cover"} src={prod.thumbnail} /></Link>
             </div>
             <div>
                 <Link to={"/prodotto/"+prod.id} className={"font-bold text-xl ml-2"}> {prod.title} </Link>
