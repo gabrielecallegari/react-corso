@@ -5,7 +5,7 @@ import CarrelloCard from "./CarrelloCard";
 import {tipoProd} from "../Home/Home";
 import React from "react";
 
-const Prodotto = (props: any) => {
+const Carrello = () => {
 
     const {cart, addCart, clearCart} = useCarrello()
 
@@ -55,4 +55,4 @@ const Prodotto = (props: any) => {
     }
 }
 
-export default Prodotto
+export default Carrello

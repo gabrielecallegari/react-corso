@@ -1,6 +1,5 @@
 import {useParams} from "react-router-dom";
 import Header from "../Home/Header";
-import {Link} from "react-router-dom";
 import {useGetProduct} from "../Home/hooks/GET/useGetProduct";
 import useCarrello from "../Home/hooks/useCarrello";
 
