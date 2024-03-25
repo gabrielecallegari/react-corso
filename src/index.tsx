@@ -31,6 +31,10 @@ const router = createBrowserRouter([
     {
         path: "/carrello",
         element: <Carrello />
+    },
+    {
+        path: "/app",
+        element: <App />
     }
 ])
 
